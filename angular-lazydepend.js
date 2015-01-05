@@ -1,6 +1,6 @@
 /**
 * @desc Based upon work by @Hiddentoa, extended with the ability to lazy inject
-* module dependencies to the rootModule
+* module dependencies to the angular.app variable
 * @author Thomas van der Ploeg <thomas.ploeg@gmail.com>
 */
 (function(angular)
@@ -11,7 +11,7 @@
 
     /*
     */
-    angular.rootModule = null;
+    angular.app = null;
 
     /**
     * Register/fetch a module.
@@ -34,8 +34,8 @@
             alreadyRegistered[name] = module;
 
             // If not main name, inject module as dependency
-            if (angular.rootModule && name !== angular.rootModule) {
-                root = origMethod(angular.rootModule);
+            if (angular.app && name !== angular.app) {
+                root = origMethod(angular.app);
 
                 if (root.requires.indexOf(name) < 0) {
                     root.requires.push.apply(root.requires, [name]);
