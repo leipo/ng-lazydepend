@@ -1,0 +1,21 @@
+{
+  "name": "ng-lazydepend",
+  "version": "1.0.0",
+  "homepage": "https://github.com/leipo/ng-lazydepend",
+  "authors": [
+    "Thomas van der Ploeg <thomas.ploeg@gmail.com>"
+  ],
+  "description": "Extend the angular.module method to allow lazy depedency injection",
+  "main": "angular-lazydepend.js",
+  "keywords": [
+    "angular",
+    "lazy",
+    "dependencies",
+    "load",
+    "injecting",
+    "module",
+    "app",
+    "extend"
+  ],
+  "license": "GNU GPL"
+}
